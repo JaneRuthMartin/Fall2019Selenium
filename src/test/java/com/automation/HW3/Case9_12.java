@@ -18,16 +18,14 @@ public class Case9_12 {
     public void setup(){
         driver = DriverFactory.createDriver("chrome");
         BrowserUtils.wait(2);
+        driver.get("http://practice.cybertekschool.com/");
+        driver.findElement(By.xpath("//a[text()='Status Codes']")).click();
     }
     @Test(description = "Verify message", dataProvider = "testData")
     public void TestCase8(String StatusCodes, String expected ) {
-        driver.get("http://practice.cybertekschool.com/");
-        driver.findElement(By.xpath("//a[text()='Status Codes']")).click();
         driver.findElement(By.xpath(StatusCodes)).click();
-
-        int location = driver.findElement(By.xpath("//p")).getText().indexOf(".");
-        String actual = driver.findElement(By.xpath("//p")).getText().substring(0,location);
-        Assert.assertEquals(actual,expected);
+        String actual = driver.findElement(By.xpath("//p")).getText();
+        Assert.assertTrue(actual.contains(expected));
     }
 
     @DataProvider (name = "testData")
