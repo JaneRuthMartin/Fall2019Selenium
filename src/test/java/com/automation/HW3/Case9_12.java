@@ -22,7 +22,7 @@ public class Case9_12 {
         driver.findElement(By.xpath("//a[text()='Status Codes']")).click();
     }
     @Test(description = "Verify message", dataProvider = "testData")
-    public void TestCase8(String StatusCodes, String expected ) {
+    public void TestCase9_12(String StatusCodes, String expected ) {
         driver.findElement(By.xpath(StatusCodes)).click();
         String actual = driver.findElement(By.xpath("//p")).getText();
         Assert.assertTrue(actual.contains(expected));
