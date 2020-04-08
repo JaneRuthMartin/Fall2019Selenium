@@ -5,8 +5,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class March4 {
+public abstract class March4 {
     static WebDriver driver;
+    public void walk(){
+
+    }
     public static void main(String[] args) throws Exception {
         ebayTest();
         amazonTest();

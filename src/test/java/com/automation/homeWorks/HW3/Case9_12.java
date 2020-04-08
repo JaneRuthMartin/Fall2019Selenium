@@ -1,10 +1,9 @@
-package com.automation.HW3;
+package com.automation.homeWorks.HW3;
 
 import com.automation.utilities.BrowserUtils;
 import com.automation.utilities.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -33,7 +32,7 @@ public class Case9_12 {
         return new Object[][]{  {"//a[text()='200']","This page returned a 200 status code"},
                                 {"//a[text()='301']","This page returned a 301 status code"},
                                 {"//a[text()='404']","This page returned a 404 status code"},
-                                {"//a[text()='500']","This page returned a 500 status code"},
+                                {"//a[text()='500']","This page returned a 500 status code"}
         };
     }
 

@@ -1,4 +1,4 @@
-package com.automation.HW3;
+package com.automation.homeWorks.HW3;
 
 import com.automation.utilities.BrowserUtils;
 import com.automation.utilities.DriverFactory;
@@ -9,7 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Case7 {
+public class Case8 {
     private WebDriver driver;
 
     @BeforeMethod
@@ -18,15 +18,15 @@ public class Case7 {
         BrowserUtils.wait(2);
     }
     @Test
-    public void TestCase7() {
+    public void TestCase8() {
         driver.get("http://practice.cybertekschool.com/");
-        driver.findElement(By.xpath("//a[text()='File Upload']")).click();
-        driver.findElement(By.id("file-upload")).sendKeys("/Users/cananarikan/Desktop/Screen Shot 2020-03-19 at 7.54.37 PM.png");
-        driver.findElement(By.id("file-submit")).click();
-        String actual = driver.findElement(By.xpath("//h3[text()='File Uploaded!']")).getText();
-        String expected = "File Uploaded!";
+        driver.findElement(By.xpath("//a[text()='Autocomplete']")).click();
+        driver.findElement(By.id("myCountry")).sendKeys("United States of America");
+        driver.findElement(By.xpath("//input[@type='button']")).click();
+
+        String actual = driver.findElement(By.xpath("//p[text()='You selected: United States of America']")).getText();
+        String expected = "You selected: United States of America";
         Assert.assertEquals(actual,expected);
-        driver.findElement(By.id("uploaded-files")).isDisplayed();
     }
 
     @AfterMethod

@@ -17,7 +17,7 @@ public class BasicNavigation {
         //ChromeDriver extends RemoteWebDriver --> implements WebDriver
         driver.get("http://google.com");//to open a website
         driver.manage().window().maximize();//to maximize browser
-//        driver.manage().window().fullscreen();
+        // driver.manage().window().fullscreen();
         Thread.sleep(3000);//for demo, wait 3 seconds
         //method that return page title
         //you can also see it as tab name, in the browser
